@@ -8,7 +8,9 @@
   "scripts": {
     "dev": "vite",
     "electron": "npx electron .",
-    "build": "tsc && vite build && electron-builder",
+    "build": "vite build",
+    "build:ts": "tsc",
+    "build:all": "tsc && vite build && electron-builder",
     "build:dir": "tsc && vite build && electron-builder --dir",
     "preview": "vite preview",
     "test": "vitest run",

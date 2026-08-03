@@ -18,8 +18,17 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["app/src/*"]
-    }
+    },
+    "forceConsistentCasingInFileNames": true,
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": false
   },
-  "include": ["app/src", "app/electron", "vite.config.ts"],
-  "exclude": ["node_modules", "dist", "dist-electron", "dist-installer"]
+  "include": ["app/src", "app/electron", "vite.config.ts", "index.html"],
+  "exclude": ["node_modules", "dist", "dist-electron", "dist-installer", "build"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  }
 }
