@@ -1,0 +1,26 @@
+appId: com.novapdf.app
+productName: NovaPDF
+copyright: Copyright © 2026 NovaPDF
+directories:
+  output: dist-installer
+  buildResources: build
+files:
+  - dist/**/*
+  - dist-electron/**/*
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+    - target: zip
+      arch:
+        - x64
+  icon: public/icon.png
+  requestedExecutionLevel: asInvoker
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: NovaPDF
+  artifactName: ${productName}-Setup-${version}.${ext}
