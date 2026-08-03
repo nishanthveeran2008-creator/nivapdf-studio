@@ -17,9 +17,9 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["app/src/*"]
     }
   },
-  "include": ["src", "vite.config.ts", "index.html"],
+  "include": ["app/src", "app/electron", "vite.config.ts"],
   "exclude": ["node_modules", "dist", "dist-electron", "dist-installer"]
 }
